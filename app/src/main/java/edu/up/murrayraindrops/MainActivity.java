@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Raindrop> generateRaindrops() {
         List<Raindrop> drops = new ArrayList<>();
-        int numberOfDrops = random.nextInt(7) + 6; // Random number between 6 and 12
+        int numberOfDrops = random.nextInt(7) + 6; // Random number between 6 and 12 for amount of drops
 
         for (int i = 0; i < numberOfDrops; i++) {
             int x = random.nextInt(canvasSize - 60) + 30;
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isOverlapping(Raindrop drop1, Raindrop drop2) {
         float distance = (float) Math.sqrt(Math.pow(drop1.x - drop2.x, 2) + Math.pow(drop1.y - drop2.y, 2));
-        return distance < 60; // 30dp radius * 2
+        return distance < 60;
     }
 
     private int averageColor(int color1, int color2) {
